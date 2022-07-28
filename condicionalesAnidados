@@ -1,0 +1,24 @@
+#Realice un programa que convierta notas numericas en porcentaje a letras
+#segun la siguiente informacion 
+# 0.0 % hasta 59.99% - D
+#60.0% hasta 75.99 % -C
+#76.00% - 85.99% -B
+#86.00% / 100% -A
+
+def  notasletras (nota):
+    if nota >= 0 and nota <60:
+        letra = "D"
+    elif nota >= 60 and nota <76:
+        letra = "C"
+    elif nota >= 76 and nota <86:
+        letra = "B"      
+    elif nota >=86 and nota <=100:
+        letra = "A"      
+    else:
+        return f"Digite una nota valida entre 0 y 100"
+    return f"El equivalente a su nota es: {letra} "
+try: 
+    nota = int (input("Digite una nota valida entre 0 y 100: "))    
+    print(notasletras(nota))
+except:
+    print("Error recuerde que debe digitar solo números ")
